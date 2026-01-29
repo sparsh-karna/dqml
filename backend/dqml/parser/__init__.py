@@ -13,6 +13,20 @@ Usage:
     ast = parse_query(query)
 """
 
-from .dmql_parser import parse_query, DMQLQueryVisitor
+from .dmql_parser import (
+    parse_query,
+    DMQLQueryVisitor,
+    DMQLQuery,
+    Condition,
+    MiningOperation,
+    InterestMeasure
+)
 
-__all__ = ['parse_query', 'DMQLQueryVisitor']
+__all__ = [
+    'parse_query',
+    'DMQLQueryVisitor',
+    'DMQLQuery',
+    'Condition',
+    'MiningOperation',
+    'InterestMeasure'
+]

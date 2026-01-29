@@ -109,7 +109,8 @@ class DMQLQueryVisitor(DMQLVisitor):
     
     def visitUseClause(self, ctx: DMQLParser.UseClauseContext):
         """Extract database name from USE clause."""
-        self.query.database = ctx.IDENTIFIER().getText()
+        if ctx and ctx.IDENTIFIER():
+            self.query.database = ctx.IDENTIFIER().getText()
         return self.visitChildren(ctx)
     
     def visitRelevanceClause(self, ctx: DMQLParser.RelevanceClauseContext):

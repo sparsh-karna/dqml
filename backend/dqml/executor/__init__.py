@@ -7,6 +7,6 @@ Supports:
 - DuckDB backend (faster analytics)
 """
 
-from .sqlite_executor import SQLiteExecutor
+from .sqlite_executor import SQLiteExecutor, ExecutionResult
 
-__all__ = ['SQLiteExecutor']
+__all__ = ['SQLiteExecutor', 'ExecutionResult']
