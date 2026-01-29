@@ -7,9 +7,26 @@ Supported Chart Types:
 - Scatter Plot
 - Line Chart
 - Heatmap
+- Histogram
+- Box Plot
+- Pie Chart
 - Table
 """
 
-from .plotly_charts import generate_chart
+from .plotly_charts import (
+    ChartResult,
+    generate_chart,
+    generate_cluster_visualization,
+    generate_anomaly_visualization,
+    generate_statistics_dashboard,
+    auto_visualize
+)
 
-__all__ = ['generate_chart']
+__all__ = [
+    'ChartResult',
+    'generate_chart',
+    'generate_cluster_visualization',
+    'generate_anomaly_visualization',
+    'generate_statistics_dashboard',
+    'auto_visualize'
+]
