@@ -370,7 +370,7 @@ def data_profile(df: pd.DataFrame) -> Dict[str, Any]:
             'unique_percentage': round(df[col].nunique() / len(df) * 100, 2) if len(df) > 0 else 0
         }
         
-        if np.issubdtype(df[col].dtype, np.number):
+        if pd.api.types.is_numeric_dtype(df[col]):
             col_data = df[col].dropna()
             if len(col_data) > 0:
                 col_profile['statistics'] = {
